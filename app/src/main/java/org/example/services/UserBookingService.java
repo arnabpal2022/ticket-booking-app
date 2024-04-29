@@ -8,6 +8,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import java.util.Optional;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.List;
 
@@ -19,7 +20,7 @@ public class UserBookingService {
 
     private ObjectMapper objectMapper = new ObjectMapper();
 
-    private static final String USERS_PATH = "app/src/main/java/org/example/localdb/users.json";
+    private static final String USERS_PATH = "D:/@projects_backend/backend-mastery/ticket-booking-app/app/src/main/java/org/example/localdb/users.json";
 
     public UserBookingService(User user1) throws IOException {
         this.user = user1;
@@ -67,8 +68,8 @@ public class UserBookingService {
             return user1.getName().equalsIgnoreCase(user.getName())
                     && UserServiceUtil.checkPassword(user.getPassword(), user1.getHashedPassword());
         }).findFirst();
-        if(fetchedUser.isPresent()){
-            fetchedUser.get().getTicketsBooked().stream().filter(ticket ->{
+        if (fetchedUser.isPresent()) {
+            fetchedUser.get().getTicketsBooked().stream().filter(ticket -> {
                 return ticket.getTicketId().equals(ticketId);
             }).findFirst();
             return Boolean.TRUE;

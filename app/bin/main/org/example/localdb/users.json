@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Lovepreet Singh",
+    "password": "12345",
+    "hashedPassword": "$2a$10$MqonEcizso4Re9iFEMajHOIHCUd5O3Q.XZX779C50ZnC/Hb6mirwW",
+    "ticketsBooked": [
+      {
+        "ticketId": "your_ticket_id",
+        "userId": "abcdefgh",
+        "source": "Bangalore",
+        "destination": "Delhi",
+        "dateOfTravel": "2023-12-08T18:30:00Z",
+        "train": {
+          "trainId": "bacs",
+          "trainNo": "12345",
+          "seats": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+          "stationTimes": {
+            "bangalore": "13:50:00",
+            "jaipur": "13:50:00",
+            "delhi": "13:50:00"
+          },
+          "stations": ["bangalore", "jaipur", "delhi"]
+
+        }
+        
+      }
+    ],
+    "userId": "abcdefgh"
+  },
+  {
+    "name": "rahul",
+    "password": "hhbb11",
+    "hashedPassword": "$2a$10$O/OWE.xh3gttMANiM4BIX.mo.4/myik1J739DZ25ecVENk8xhMCW2",
+    "ticketsBooked": [],
+    "userId": "fe46da4d-c8d1-4229-97e6-600dce6941e8"
+  }
+]

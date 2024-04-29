@@ -1,6 +1,5 @@
 package org.example.entitites;
 
-import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -19,6 +18,8 @@ public class Train {
         this.stationTimes = stationTimes;
         this.stations = stations;
     }
+
+    public Train(){};
 
     public List<String> getStations(){
         return stations;
